@@ -69,7 +69,7 @@ function calculatePayroll(employee){
     
 }
 
-for(i=0; i<practiceEmployees.length; i++){
+for(let i=0; i<practiceEmployees.length; i++){
     employee = practiceEmployees[i]
     calculatePayroll(employee);
 }
