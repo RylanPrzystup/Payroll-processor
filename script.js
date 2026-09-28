@@ -1,53 +1,128 @@
-const practiceEmployees = [
+const testEmployees = [
     {
-        id: 1,
-        firstName: "Maya",
-        lastName: "Rodriguez",
-        weekOneHours: 40,
-        weekTwoHours: 36,
-        hourlyRate: 18.50
+        id: 101,
+        firstName: "Elena",
+        lastName: "Martinez",
+        weekOneHours: 38,
+        weekTwoHours: 41,
+        hourlyRate: 22.75
     },
     {
-        id: 2,
-        firstName: "Jordan",
-        lastName: "Lee",
-        weekOneHours: 32,
-        weekTwoHours: 38,
-        hourlyRate: 21.25
+        id: 102,
+        firstName: "Darius",
+        lastName: "Johnson",
+        weekOneHours: 34,
+        weekTwoHours: 37,
+        hourlyRate: 19.80
     },
     {
-        id: 3,
-        firstName: "Sofia",
-        lastName: "Patel",
+        id: 103,
+        firstName: "Priya",
+        lastName: "Shah",
         weekOneHours: 40,
         weekTwoHours: 40,
-        hourlyRate: 17.75
+        hourlyRate: 27.25
     },
     {
-        id: 4,
-        firstName: "Marcus",
-        lastName: "Chen",
-        weekOneHours: 25,
-        weekTwoHours: 31,
-        hourlyRate: 24.00
-    },
-    {
-        id: 5,
-        firstName: "Aaliyah",
-        lastName: "Brooks",
-        weekOneHours: 42,
-        weekTwoHours: 39,
-        hourlyRate: 19.50
-    },
-    {
-        id: 6,
-        firstName: "Noah",
-        lastName: "Williams",
-        weekOneHours: 37,
+        id: 104,
+        firstName: "Caleb",
+        lastName: "Thompson",
+        weekOneHours: 29,
         weekTwoHours: 35,
-        hourlyRate: 22.00
+        hourlyRate: 18.60
+    },
+    {
+        id: 105,
+        firstName: "Isabella",
+        lastName: "Garcia",
+        weekOneHours: 43,
+        weekTwoHours: 38,
+        hourlyRate: 24.40
+    },
+    {
+        id: 106,
+        firstName: "Ethan",
+        lastName: "Nguyen",
+        weekOneHours: 36,
+        weekTwoHours: 32,
+        hourlyRate: 21.15
+    },
+    {
+        id: 107,
+        firstName: "Jasmine",
+        lastName: "Walker",
+        weekOneHours: 40,
+        weekTwoHours: 39,
+        hourlyRate: 20.50
+    },
+    {
+        id: 108,
+        firstName: "Mateo",
+        lastName: "Rivera",
+        weekOneHours: 27,
+        weekTwoHours: 31,
+        hourlyRate: 23.85
+    },
+    {
+        id: 109,
+        firstName: "Grace",
+        lastName: "Kim",
+        weekOneHours: 35,
+        weekTwoHours: 42,
+        hourlyRate: 26.10
+    },
+    {
+        id: 110,
+        firstName: "Malik",
+        lastName: "Carter",
+        weekOneHours: 40,
+        weekTwoHours: 33,
+        hourlyRate: 17.95
+    },
+    {
+        id: 111,
+        firstName: "Natalie",
+        lastName: "Bennett",
+        weekOneHours: 31,
+        weekTwoHours: 36,
+        hourlyRate: 25.30
+    },
+    {
+        id: 112,
+        firstName: "Lucas",
+        lastName: "Anderson",
+        weekOneHours: 44,
+        weekTwoHours: 40,
+        hourlyRate: 28.75
+    },
+    {
+        id: 113,
+        firstName: "Zoe",
+        lastName: "Collins",
+        weekOneHours: 33,
+        weekTwoHours: 29,
+        hourlyRate: 20.25
+    },
+    {
+        id: 114,
+        firstName: "Andre",
+        lastName: "Mitchell",
+        weekOneHours: 39,
+        weekTwoHours: 37,
+        hourlyRate: 23.50
+    },
+    {
+        id: 115,
+        firstName: "Hannah",
+        lastName: "Foster",
+        weekOneHours: 41,
+        weekTwoHours: 34,
+        hourlyRate: 21.60
     }
 ];
+
+let totalPayroll = 0
+
 
 function calculatePayroll(employee){
 
@@ -64,12 +139,17 @@ function calculatePayroll(employee){
 
     netPay = totalCheck - totalDeductions
 
-
     console.log(employee.firstName + " " + employee.lastName + " | Gross pay: $" + totalCheck.toFixed(2) + " |  Net Pay: $" + netPay.toFixed(2))
+
+    return totalPayroll += netPay
     
 }
 
-for(let i=0; i<practiceEmployees.length; i++){
-    employee = practiceEmployees[i]
+for(let i=0; i<testEmployees.length; i++){
+    employee = testEmployees[i]
     calculatePayroll(employee);
+
+    if(i===testEmployees.length - 1){
+        console.log(`TOTAL PAYROLL PAYOUT: $${totalPayroll.toFixed(2)}`)
+    }
 }
